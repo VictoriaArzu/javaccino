@@ -34,6 +34,10 @@ public class Shapes {
             int first = row[0];
             int last = row[numInRows-1];
 
+            for(int i = 0; i < numInRows; i++) {
+                System.out.println("*");
+            }
+            
             
         }
         else if (unknownShape.equals(xShape)) {
@@ -44,6 +48,7 @@ public class Shapes {
             int[] column = new int[numInColumns];
             int first = row[0];
             int last = row[numInRows-1];
+            
 
 
         }
