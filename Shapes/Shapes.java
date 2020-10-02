@@ -1,4 +1,7 @@
+package Shapes;
+
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Shapes {
     public static void main(String[] args) {
@@ -26,28 +29,49 @@ public class Shapes {
         System.out.println("How many columns?");
         numInColumns = input.nextInt();
 
+        while(numInRows!=numInColumns) {
+            System.out.println("This will be a square grid. Please enter the same number for both rows and columns.\n");
+          
+            System.out.println("How many rows?");
+            numInRows = input.nextInt();
+  
+            System.out.println("How many columns?");
+            numInColumns = input.nextInt();
+        }
+
         if (unknownShape.equals(boxShape)) {
             System.out.println("You have decided the Box Shape with " + numInRows + " rows and " + numInColumns + " columns");
 
-            int[] row = new int[numInRows];
-            int[] column = new int[numInColumns];
-            int first = row[0];
-            int last = row[numInRows-1];
-
-            for(int i = 0; i < numInRows; i++) {
-                System.out.println("*");
-            }
             
             
         }
         else if (unknownShape.equals(xShape)) {
             System.out.println("You have decided the X Shape with " + numInRows + " rows and " + numInColumns + " columns");
 
+            String[][] array = new String[numInRows][numInColumns];
+
+            // blank slate
+            for (int i = 0; (i < numInRows); i++) {
+                for (int k = 0; k < numInColumns; k++) {
+                 array[i][k] = " ";
+               }
+            }
+              
+            //diagonal line
+              for (int i = 0; i < numInRows; i++) {
+                 array[i][i] = "X";
+                }
             
-            int[] row = new int[numInRows];
-            int[] column = new int[numInColumns];
-            int first = row[0];
-            int last = row[numInRows-1];
+            //opposite diagonal
+
+            for(int i = 0, k = numInRows - 1; i < numInRows ;i++, k--) {
+                array[i][k] = "X";
+            }
+              
+            // This code is for printing it all out
+            for (int i = 0; i < numInRows; i++) {
+                System.out.print(Arrays.toString(array[i]) + "\n");
+            }
             
 
 
@@ -56,10 +80,6 @@ public class Shapes {
             System.out.println("You have decided the Box with X Shape with " + numInRows + " rows and " + numInColumns + " columns");
 
             
-            int[] row = new int[numInRows];
-            int[] column = new int[numInColumns];
-            int first = row[0];
-            int last = row[numInRows-1];
 
         }
         else {
