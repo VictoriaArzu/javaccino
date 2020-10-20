@@ -7,6 +7,10 @@ public class Shapes{
     public static void main(String[] args) {
         //initialization variables and Scanner
         Scanner input = new Scanner(System.in);
+        SelectShape select = new SelectShape();
+        Files openf = new Files();
+        Files writef = new Files();
+
 
         String unknownShape;
         String boxShape = "Box";
@@ -15,6 +19,12 @@ public class Shapes{
         int numInRows, numInColumns;
 
         //start program
+        //creates StoreShapes.txt file
+        openf.createShapesFile();
+
+        //write to the file
+        writef.writeToShapesFile();
+
         //desc of program
         System.out.println("This program will draw a shape for the user\nbased on the option they pick.\n\n");
 
