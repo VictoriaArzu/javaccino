@@ -7,7 +7,7 @@ public class Shapes{
     public static void main(String[] args) {
         //initialization variables and Scanner
         Scanner input = new Scanner(System.in);
-        SelectShape select = new SelectShape();
+        //SelectShape select = new SelectShape();
         Files openf = new Files();
         Files writef = new Files();
 
@@ -34,10 +34,9 @@ public class Shapes{
         System.out.println("3. Box with X");
         unknownShape = input.nextLine();
 
-        System.out.println("How many rows?");
+        System.out.println("This will be a square shape. How many columns and rows?");
         numInRows = input.nextInt();
-        System.out.println("How many columns?");
-        numInColumns = input.nextInt();
+        numInColumns = numInRows;
 
         while(numInRows!=numInColumns) {
             System.out.println("This will be a square grid. Please enter the same number for both rows and columns.\n");
