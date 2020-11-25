@@ -36,6 +36,7 @@ public class SelectShape {
 
     System.out.println("This shape will be shown on a square grid. How many columns and rows?");
     numInRows = input.nextInt();
+    String newLine = input.nextLine(); //skip this line, serves no purpose for input
     numInColumns = numInRows;
 
     return numInColumns;

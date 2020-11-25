@@ -1,1 +1,6 @@
-i am writing to the file
+
+An X Shape with 4 rows and columns.
+[*,  ,  , *]
+[ , *, *,  ]
+[ , *, *,  ]
+[*,  ,  , *]

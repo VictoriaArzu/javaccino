@@ -12,6 +12,10 @@ public class Box{
       numInColumns = shapeSize;
     }
 
+    public String toString() {
+      return "Box of size: " + numInRows;
+    }
+
     public void createBoxShape() {
       Files writef = new Files();
 
