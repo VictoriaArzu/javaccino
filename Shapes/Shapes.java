@@ -46,21 +46,19 @@ public class Shapes{
 
         System.out.println("Do you want to continue? Y or N.");
         String question = input.nextLine();
+        while (!(question.equals("Y")) && !(question.equals("N"))) {
+            System.out.println("Please type in correct input.");
+            question = input.nextLine();
+            System.out.println("You wrote: " + question);
+        }
         if (question.equals("N")) {
           break;
         } 
         else if (question.equals("Y")) {
           continue;
         } 
-        else {
-          // TODO: Why doesn't this work for invalid input?
-          while (!(question.equals("Y")) || !(question.equals("N"))) {
-            System.out.println("Please type in correct input.");
-            question = input.nextLine();
-            System.out.println("You wrote: " + question);
-          }
-        }
       }
       // ---- END LOOP ------
+   
     }
 }
