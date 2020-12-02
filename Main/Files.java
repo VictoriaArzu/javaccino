@@ -1,4 +1,4 @@
-package Shapes;
+package Main;
 
 import java.io.File; //imports File
 import java.io.IOException; //handles errors

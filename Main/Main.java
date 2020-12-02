@@ -1,8 +1,9 @@
-package Shapes;
+package Main;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
-public class Shapes{
+public class Main{
     public static void main(String[] args) {
       Scanner input = new Scanner(System.in);
       //creates StoreShapes.txt file
@@ -12,15 +13,19 @@ public class Shapes{
       // initialize variables
       int maxNumShapes = 100;
       int numShape = 0;
-      Object[] shapes = new Object[maxNumShapes];
-      SelectShape select = new SelectShape();
+      char repeat;
+      String question;
+
 
       // ----- BEGIN LOOP -------
-      while(true) {
+      do {
+        Object[] shapes = new Object[maxNumShapes];
+        SelectShape select = new SelectShape(); 
         Menu shapeType = select.selectShapes();
-         
+
         int shapeSize = select.selectSize(); 
         
+
         if (shapeType == Menu.BOX) {
           Box boxObject = new Box(shapeSize);
           boxObject.createBoxShape();
@@ -44,21 +49,21 @@ public class Shapes{
       
         numShape++;
 
-        System.out.println("Do you want to continue? Y or N.");
-        String question = input.nextLine();
-        while (!(question.equals("Y")) && !(question.equals("N"))) {
+        // //exit method
+
+        System.out.println("Do you want to continue? Y or N.\n");
+
+        question = input.nextLine();
+
+          while (!(question.equals("Y")) && !(question.equals("N"))) {
             System.out.println("Please type in correct input.");
             question = input.nextLine();
             System.out.println("You wrote: " + question);
-        }
-        if (question.equals("N")) {
-          break;
-        } 
-        else if (question.equals("Y")) {
-          continue;
-        } 
+          }
+        repeat = question.charAt(0);
       }
+
+      while (repeat == 'Y' || repeat == 'y');
       // ---- END LOOP ------
-   
     }
 }

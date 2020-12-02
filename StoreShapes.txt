@@ -4,3 +4,15 @@ An X Shape with 4 rows and columns.
 [ , *, *,  ]
 [ , *, *,  ]
 [*,  ,  , *]
+
+An X Shape with 4 rows and columns.
+[*,  ,  , *]
+[ , *, *,  ]
+[ , *, *,  ]
+[*,  ,  , *]
+
+A Box Shape with 4 rows and columns.
+[*, *, *, *]
+[*,  ,  , *]
+[*,  ,  , *]
+[*, *, *, *]

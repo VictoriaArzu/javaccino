@@ -1,4 +1,4 @@
-package Shapes;
+package Main;
 
 import java.util.Arrays;
 
